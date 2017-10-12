@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TableViewVC : UIViewController
+@interface TableViewVC : UIViewController<UITableViewDataSource> {
+    NSArray *dataList;
+}
 
 @end

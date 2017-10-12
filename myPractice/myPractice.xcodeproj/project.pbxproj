@@ -9,10 +9,16 @@
 /* Begin PBXBuildFile section */
 		6BCE24D51F8E38A400A1AA04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE24D41F8E38A400A1AA04 /* main.m */; };
 		6BCE24D81F8E38A400A1AA04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE24D71F8E38A400A1AA04 /* AppDelegate.m */; };
-		6BCE24DB1F8E38A400A1AA04 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE24DA1F8E38A400A1AA04 /* ViewController.m */; };
 		6BCE24DE1F8E38A400A1AA04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BCE24DC1F8E38A400A1AA04 /* Main.storyboard */; };
 		6BCE24E01F8E38A400A1AA04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BCE24DF1F8E38A400A1AA04 /* Assets.xcassets */; };
 		6BCE24E31F8E38A400A1AA04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BCE24E11F8E38A400A1AA04 /* LaunchScreen.storyboard */; };
+		6BCE24ED1F8E3BDF00A1AA04 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE24EC1F8E3BDF00A1AA04 /* MainVC.m */; };
+		6BCE24F01F8E485600A1AA04 /* TableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE24EF1F8E485600A1AA04 /* TableViewVC.m */; };
+		6BCE24F71F8E490300A1AA04 /* blizzard.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCE24F21F8E490300A1AA04 /* blizzard.png */; };
+		6BCE24F81F8E490300A1AA04 /* cloudy.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCE24F31F8E490300A1AA04 /* cloudy.png */; };
+		6BCE24F91F8E490300A1AA04 /* rainy.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCE24F41F8E490300A1AA04 /* rainy.png */; };
+		6BCE24FA1F8E490300A1AA04 /* snow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCE24F51F8E490300A1AA04 /* snow.png */; };
+		6BCE24FB1F8E490300A1AA04 /* sunny.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCE24F61F8E490300A1AA04 /* sunny.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +26,19 @@
 		6BCE24D41F8E38A400A1AA04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6BCE24D61F8E38A400A1AA04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6BCE24D71F8E38A400A1AA04 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6BCE24D91F8E38A400A1AA04 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6BCE24DA1F8E38A400A1AA04 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6BCE24DD1F8E38A400A1AA04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6BCE24DF1F8E38A400A1AA04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BCE24E21F8E38A400A1AA04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BCE24E41F8E38A400A1AA04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BCE24EB1F8E3BDF00A1AA04 /* MainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
+		6BCE24EC1F8E3BDF00A1AA04 /* MainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
+		6BCE24EE1F8E485600A1AA04 /* TableViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewVC.h; sourceTree = "<group>"; };
+		6BCE24EF1F8E485600A1AA04 /* TableViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewVC.m; sourceTree = "<group>"; };
+		6BCE24F21F8E490300A1AA04 /* blizzard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blizzard.png; sourceTree = "<group>"; };
+		6BCE24F31F8E490300A1AA04 /* cloudy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloudy.png; sourceTree = "<group>"; };
+		6BCE24F41F8E490300A1AA04 /* rainy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rainy.png; sourceTree = "<group>"; };
+		6BCE24F51F8E490300A1AA04 /* snow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow.png; sourceTree = "<group>"; };
+		6BCE24F61F8E490300A1AA04 /* sunny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sunny.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +71,15 @@
 		6BCE24D21F8E38A400A1AA04 /* myPractice */ = {
 			isa = PBXGroup;
 			children = (
+				6BCE24EB1F8E3BDF00A1AA04 /* MainVC.h */,
+				6BCE24EC1F8E3BDF00A1AA04 /* MainVC.m */,
 				6BCE24D61F8E38A400A1AA04 /* AppDelegate.h */,
 				6BCE24D71F8E38A400A1AA04 /* AppDelegate.m */,
-				6BCE24D91F8E38A400A1AA04 /* ViewController.h */,
-				6BCE24DA1F8E38A400A1AA04 /* ViewController.m */,
 				6BCE24DC1F8E38A400A1AA04 /* Main.storyboard */,
-				6BCE24DF1F8E38A400A1AA04 /* Assets.xcassets */,
 				6BCE24E11F8E38A400A1AA04 /* LaunchScreen.storyboard */,
+				6BCE24DF1F8E38A400A1AA04 /* Assets.xcassets */,
 				6BCE24E41F8E38A400A1AA04 /* Info.plist */,
+				6BCE24EA1F8E3BB800A1AA04 /* tableVIew */,
 				6BCE24D31F8E38A400A1AA04 /* Supporting Files */,
 			);
 			path = myPractice;
@@ -77,6 +91,28 @@
 				6BCE24D41F8E38A400A1AA04 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6BCE24EA1F8E3BB800A1AA04 /* tableVIew */ = {
+			isa = PBXGroup;
+			children = (
+				6BCE24F11F8E48D200A1AA04 /* resources */,
+				6BCE24EE1F8E485600A1AA04 /* TableViewVC.h */,
+				6BCE24EF1F8E485600A1AA04 /* TableViewVC.m */,
+			);
+			name = tableVIew;
+			sourceTree = "<group>";
+		};
+		6BCE24F11F8E48D200A1AA04 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				6BCE24F21F8E490300A1AA04 /* blizzard.png */,
+				6BCE24F31F8E490300A1AA04 /* cloudy.png */,
+				6BCE24F41F8E490300A1AA04 /* rainy.png */,
+				6BCE24F51F8E490300A1AA04 /* snow.png */,
+				6BCE24F61F8E490300A1AA04 /* sunny.png */,
+			);
+			name = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +174,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BCE24E31F8E38A400A1AA04 /* LaunchScreen.storyboard in Resources */,
+				6BCE24FB1F8E490300A1AA04 /* sunny.png in Resources */,
+				6BCE24F91F8E490300A1AA04 /* rainy.png in Resources */,
+				6BCE24F71F8E490300A1AA04 /* blizzard.png in Resources */,
 				6BCE24E01F8E38A400A1AA04 /* Assets.xcassets in Resources */,
+				6BCE24F81F8E490300A1AA04 /* cloudy.png in Resources */,
+				6BCE24FA1F8E490300A1AA04 /* snow.png in Resources */,
 				6BCE24DE1F8E38A400A1AA04 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,7 +191,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BCE24DB1F8E38A400A1AA04 /* ViewController.m in Sources */,
+				6BCE24F01F8E485600A1AA04 /* TableViewVC.m in Sources */,
+				6BCE24ED1F8E3BDF00A1AA04 /* MainVC.m in Sources */,
 				6BCE24D81F8E38A400A1AA04 /* AppDelegate.m in Sources */,
 				6BCE24D51F8E38A400A1AA04 /* main.m in Sources */,
 			);
@@ -278,6 +320,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lee.myPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -289,6 +332,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lee.myPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
