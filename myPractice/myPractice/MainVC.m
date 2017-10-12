@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    dataList = [[NSArray alloc] initWithObjects:@"tableView", nil];
+    dataList = [[NSArray alloc] initWithObjects:@"tableView", @"cutomTableView", nil];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -43,6 +43,9 @@
         UIViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"tableViewVC"];
         [self.navigationController pushViewController:vc animated:true];
         
+    }else if([str isEqualToString:@"cutomTableView"]){
+        UIViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"customTableView"];
+        [self.navigationController pushViewController:vc animated:true];
     }else{
         NSLog(@"선택되었습니다.");
     }
