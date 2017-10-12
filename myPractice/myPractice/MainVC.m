@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    dataList = [[NSArray alloc] initWithObjects:@"tableView", @"cutomTableView", @"TabBar", nil];
+    dataList = [[NSArray alloc] initWithObjects:@"tableView", @"cutomTableView", @"TabBar", @"ScrollView", nil];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -48,6 +48,9 @@
         [self.navigationController pushViewController:vc animated:true];
     }else if([str isEqualToString:@"TabBar"]){
         UIViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"TabBarVC"];
+        [self.navigationController pushViewController:vc animated:true];
+    }else if([str isEqualToString:@"ScrollView"]){
+        UIViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ScrollViewVC"];
         [self.navigationController pushViewController:vc animated:true];
     }else{
         NSLog(@"선택되었습니다.");
