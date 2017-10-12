@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B6BA7351F8F60E6002087D8 /* TabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6BA7341F8F60E6002087D8 /* TabBarVC.m */; };
 		6BCE24D51F8E38A400A1AA04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE24D41F8E38A400A1AA04 /* main.m */; };
 		6BCE24D81F8E38A400A1AA04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE24D71F8E38A400A1AA04 /* AppDelegate.m */; };
 		6BCE24DE1F8E38A400A1AA04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BCE24DC1F8E38A400A1AA04 /* Main.storyboard */; };
@@ -39,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B6BA7331F8F60E6002087D8 /* TabBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarVC.h; sourceTree = "<group>"; };
+		6B6BA7341F8F60E6002087D8 /* TabBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarVC.m; sourceTree = "<group>"; };
 		6BCE24D01F8E38A400A1AA04 /* myPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BCE24D41F8E38A400A1AA04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6BCE24D61F8E38A400A1AA04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -89,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B6BA7361F8F60EB002087D8 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				6B6BA7331F8F60E6002087D8 /* TabBarVC.h */,
+				6B6BA7341F8F60E6002087D8 /* TabBarVC.m */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
 		6BCE24C71F8E38A400A1AA04 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +130,7 @@
 				6BCE24E41F8E38A400A1AA04 /* Info.plist */,
 				6BCE24EA1F8E3BB800A1AA04 /* tableVIew */,
 				6BCE24FD1F8EFE4E00A1AA04 /* customTableView */,
+				6B6BA7361F8F60EB002087D8 /* TabBar */,
 				6BCE24D31F8E38A400A1AA04 /* Supporting Files */,
 			);
 			path = myPractice;
@@ -280,6 +293,7 @@
 			files = (
 				6BCE24F01F8E485600A1AA04 /* TableViewVC.m in Sources */,
 				6BCE25231F8F025B00A1AA04 /* CustomTableViewCell.m in Sources */,
+				6B6BA7351F8F60E6002087D8 /* TabBarVC.m in Sources */,
 				6BCE24ED1F8E3BDF00A1AA04 /* MainVC.m in Sources */,
 				6BCE25001F8EFE9200A1AA04 /* CustomTableViewVC.m in Sources */,
 				6BCE25031F8F00EF00A1AA04 /* DetailVC.m in Sources */,
