@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    dataList = [[NSArray alloc] initWithObjects:@"tableView", @"cutomTableView", @"TabBar", @"ScrollView", nil];
+    dataList = [[NSArray alloc] initWithObjects:@"tableView", @"cutomTableView", @"TabBar", @"ScrollView", @"XmlParsing", nil];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -37,24 +37,25 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *str = [dataList objectAtIndex:indexPath.row];
+    UIViewController* vc;
     
-    if( [str isEqualToString:@"tableView"])
-    {
-        UIViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"tableViewVC"];
-        [self.navigationController pushViewController:vc animated:true];
-        
+    if( [str isEqualToString:@"tableView"]){
+        vc = [self.storyboard instantiateViewControllerWithIdentifier:@"tableViewVC"];
     }else if([str isEqualToString:@"cutomTableView"]){
-        UIViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"customTableView"];
-        [self.navigationController pushViewController:vc animated:true];
+        vc = [self.storyboard instantiateViewControllerWithIdentifier:@"customTableView"];
     }else if([str isEqualToString:@"TabBar"]){
-        UIViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"TabBarVC"];
-        [self.navigationController pushViewController:vc animated:true];
+        vc = [self.storyboard instantiateViewControllerWithIdentifier:@"TabBarVC"];
     }else if([str isEqualToString:@"ScrollView"]){
-        UIViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ScrollViewVC"];
-        [self.navigationController pushViewController:vc animated:true];
-    }else{
+        vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ScrollViewVC"];
+    }else if( [str isEqualToString:@"XmlParsing"]){
+        vc = [self.storyboard instantiateViewControllerWithIdentifier:@"XmlParsingVC"];
+    }
+    else{
         NSLog(@"선택되었습니다.");
     }
+    
+    [self.navigationController pushViewController:vc animated:true];
+    
 }
 
 
