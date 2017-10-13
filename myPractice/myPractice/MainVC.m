@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    dataList = [[NSArray alloc] initWithObjects:@"tableView", @"cutomTableView", @"TabBar", @"ScrollView", @"XmlParsing", nil];
+    dataList = [[NSArray alloc] initWithObjects:@"tableView", @"cutomTableView", @"TabBar", @"ScrollView", @"XmlParsing", @"jsonParsing", nil];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -49,6 +49,8 @@
         vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ScrollViewVC"];
     }else if( [str isEqualToString:@"XmlParsing"]){
         vc = [self.storyboard instantiateViewControllerWithIdentifier:@"XmlParsingVC"];
+    }else if( [str isEqualToString:@"jsonParsing"]){
+        vc = [self.storyboard instantiateViewControllerWithIdentifier:@"jsonParsingVC"];
     }
     else{
         NSLog(@"선택되었습니다.");
