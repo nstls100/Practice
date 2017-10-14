@@ -17,7 +17,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    dataList = [[NSArray alloc] initWithObjects:@"tableView", @"cutomTableView", @"TabBar", @"ScrollView", @"XmlParsing", @"jsonParsing", @"collectionView", nil];
+    //dataList = [[NSArray alloc] initWithObjects:@"tableView", @"cutomTableView", @"TabBar", @"ScrollView", @"XmlParsing", @"jsonParsing", @"collectionView", nil];
+    NSDictionary *dic_1 = @{@"vc" : @"tableViewVC", @"name": @"n1"};
+    NSDictionary *dic_2 = @{@"vc" : @"customTableView", @"name": @"n2"};
+    NSDictionary *dic_3 = @{@"vc" : @"TabBarVC", @"name": @"n3"};
+    NSDictionary *dic_4 = @{@"vc" : @"ScrollViewVC", @"name": @"n4"};
+    NSDictionary *dic_5 = @{@"vc" : @"XmlParsingVC", @"name": @"n5"};
+    NSDictionary *dic_6 = @{@"vc" : @"jsonParsing", @"name": @"n6"};
+    NSDictionary *dic_7 = @{@"vc" : @"CollectionViewVC", @"name": @"n7"};
+    
+    dataList = [[NSArray alloc] initWithObjects:dic_1, dic_2, dic_3, dic_4, dic_5, dic_6, dic_7, nil];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -30,32 +39,17 @@
 {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.textLabel.text = [dataList objectAtIndex:indexPath.row];
+    
+    NSDictionary *dic = [dataList objectAtIndex:indexPath.row];
+    cell.textLabel.text = [dic objectForKey:@"name"];
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSString *str = [dataList objectAtIndex:indexPath.row];
-    UIViewController* vc;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if( [str isEqualToString:@"tableView"]){
-        vc = [self.storyboard instantiateViewControllerWithIdentifier:@"tableViewVC"];
-    }else if([str isEqualToString:@"cutomTableView"]){
-        vc = [self.storyboard instantiateViewControllerWithIdentifier:@"customTableView"];
-    }else if([str isEqualToString:@"TabBar"]){
-        vc = [self.storyboard instantiateViewControllerWithIdentifier:@"TabBarVC"];
-    }else if([str isEqualToString:@"ScrollView"]){
-        vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ScrollViewVC"];
-    }else if( [str isEqualToString:@"XmlParsing"]){
-        vc = [self.storyboard instantiateViewControllerWithIdentifier:@"XmlParsingVC"];
-    }else if( [str isEqualToString:@"jsonParsing"]){
-        vc = [self.storyboard instantiateViewControllerWithIdentifier:@"jsonParsingVC"];
-    }else if( [str isEqualToString:@"collectionView"]){
-        vc = [self.storyboard instantiateViewControllerWithIdentifier:@"CollectionViewVC"];
-    }else{
-        NSLog(@"선택되었습니다.");
-    }
+    NSDictionary *dic = [dataList objectAtIndex:indexPath.row];
+    
+    UIViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier: [dic objectForKey:@"vc"]];
     
     [self.navigationController pushViewController:vc animated:true];
     
