@@ -50,7 +50,7 @@
     NSDictionary *dic = [dataList objectAtIndex:indexPath.row];
     
     UIViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier: [dic objectForKey:@"vc"]];
-    
+    NSLog(@"이재홍");
     [self.navigationController pushViewController:vc animated:true];
     
 }
