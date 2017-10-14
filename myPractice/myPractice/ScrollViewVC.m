@@ -30,7 +30,7 @@
         imgview.contentMode = UIViewContentModeScaleAspectFit;
         float xPosition = self.view.frame.size.width * i;
         
-        imgview.frame = CGRectMake(xPosition, -80, self.view.frame.size.width, self.view.frame.size.height);
+        imgview.frame = CGRectMake(xPosition, 0, self.view.frame.size.width, self.view.frame.size.height);
         [scrollView setContentSize:CGSizeMake(self.view.frame.size.width * ( i + 1), 0 )];
         [scrollView addSubview:imgview];
     }

@@ -8,11 +8,30 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CustomTableViewCell : UITableViewCell
+// > block
+typedef void(^CustomTableViewCellBlock)(NSInteger, NSString *);
+
+// > delegate
+@protocol CustomTableViewCellDelegate <NSObject>
+
+- (void)select:(NSInteger)idx name:(NSString *)nm;
+
+@end
+
+@interface CustomTableViewCell : UITableViewCell 
+
+// > call back
+@property (nonatomic, copy) CustomTableViewCellBlock block;
+@property (nonatomic, retain) id<CustomTableViewCellDelegate> delegate;
+
+@property (nonatomic) NSInteger idx;        // > cell index
+@property (nonatomic) NSDictionary *item;   // > data item
 
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *amountLabel;
 @property (strong, nonatomic) IBOutlet UILabel *valueLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *imgView;
+
+- (void)setCellData;
 
 @end

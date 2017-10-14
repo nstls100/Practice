@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomTableViewCell.h"
 
-@interface CustomTableViewVC : UIViewController{
+@interface CustomTableViewVC : UIViewController <CustomTableViewCellDelegate>{
     NSArray *itemList;
 }
+
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end

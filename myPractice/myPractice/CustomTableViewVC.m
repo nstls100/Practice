@@ -7,7 +7,6 @@
 //
 
 #import "CustomTableViewVC.h"
-#import "CustomTableViewCell.h"
 #import "DetailVC.h"
 
 @interface CustomTableViewVC ()
@@ -50,6 +49,8 @@
     
 }
 
+#pragma mark - table view
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -63,12 +64,23 @@
     CustomTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     NSDictionary *dicTemp = [itemList objectAtIndex:indexPath.row];
+    cell.idx = indexPath.row;
+    cell.item = dicTemp;
+    [cell setCellData];
     
-    cell.nameLabel.text = [dicTemp objectForKey:@"named"];
-    cell.amountLabel.text = [dicTemp objectForKey:@"amount"];
-    cell.valueLabel.text = [dicTemp objectForKey:@"value"];
+    // > block
+    cell.block = ^(NSInteger idx, NSString *name){
+        NSLog(@"index : %d name : %@", (int)idx, name);
+        NSLog(@"Block");
+    };
     
-    cell.imgView.image = [UIImage imageNamed:[dicTemp objectForKey:@"image"]];
+    cell.block = ^(NSInteger idx, NSString *name){
+        NSLog(@"index : %d name : %@", (int)idx, name);
+        NSLog(@"Block");
+    };
+    
+    // > delegate
+    cell.delegate = self;
     
     return cell;
 }
@@ -86,5 +98,12 @@
     [self.navigationController pushViewController:vc animated:true];
 }
 
+#pragma mark - a custom table view cell delegate
 
+- (void)select:(NSInteger)idx name:(NSString *)nm {
+    NSLog(@"index : %d name : %@", (int)idx, nm);
+    NSLog(@"Delegate");
+}
+
+#pragma mark a custom table view cell delegate end
 @end

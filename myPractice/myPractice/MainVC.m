@@ -23,7 +23,7 @@
     NSDictionary *dic_3 = @{@"vc" : @"TabBarVC", @"name": @"n3"};
     NSDictionary *dic_4 = @{@"vc" : @"ScrollViewVC", @"name": @"n4"};
     NSDictionary *dic_5 = @{@"vc" : @"XmlParsingVC", @"name": @"n5"};
-    NSDictionary *dic_6 = @{@"vc" : @"jsonParsing", @"name": @"n6"};
+    NSDictionary *dic_6 = @{@"vc" : @"JsonParsingVC", @"name": @"n6"};
     NSDictionary *dic_7 = @{@"vc" : @"CollectionViewVC", @"name": @"n7"};
     
     dataList = [[NSArray alloc] initWithObjects:dic_1, dic_2, dic_3, dic_4, dic_5, dic_6, dic_7, nil];
@@ -41,7 +41,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     NSDictionary *dic = [dataList objectAtIndex:indexPath.row];
-    cell.textLabel.text = [dic objectForKey:@"name"];
+    cell.textLabel.text = [dic objectForKey:@"vc"];
     return cell;
 }
 
