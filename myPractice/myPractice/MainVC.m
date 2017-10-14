@@ -48,7 +48,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSDictionary *dic = [dataList objectAtIndex:indexPath.row];
-    
+    NSLog(@"B J Kim");
     UIViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier: [dic objectForKey:@"vc"]];
     NSLog(@"이재홍");
     [self.navigationController pushViewController:vc animated:true];
