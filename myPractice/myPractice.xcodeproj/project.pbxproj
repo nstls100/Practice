@@ -21,11 +21,14 @@
 		6BCE24E01F8E38A400A1AA04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BCE24DF1F8E38A400A1AA04 /* Assets.xcassets */; };
 		6BCE24E31F8E38A400A1AA04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BCE24E11F8E38A400A1AA04 /* LaunchScreen.storyboard */; };
 		6BCE24ED1F8E3BDF00A1AA04 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE24EC1F8E3BDF00A1AA04 /* MainVC.m */; };
-		6BCE25001F8EFE9200A1AA04 /* CustomTableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE24FF1F8EFE9200A1AA04 /* CustomTableViewVC.m */; };
-		6BCE25031F8F00EF00A1AA04 /* DetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE25021F8F00EF00A1AA04 /* DetailVC.m */; };
-		6BCE25231F8F025B00A1AA04 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE25221F8F025B00A1AA04 /* CustomTableViewCell.m */; };
 		6BD6D68B20020A610030111E /* DefaultTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD6D68920020A610030111E /* DefaultTableView.m */; };
 		6BD6D68C20020A610030111E /* DefaultTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD6D68A20020A610030111E /* DefaultTableView.xib */; };
+		6BD6D6912002144F0030111E /* CustomTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD6D68F2002144F0030111E /* CustomTableView.m */; };
+		6BD6D6922002144F0030111E /* CustomTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD6D6902002144F0030111E /* CustomTableView.xib */; };
+		6BD6D6962002154C0030111E /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD6D6942002154C0030111E /* CustomTableViewCell.m */; };
+		6BD6D6972002154C0030111E /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD6D6952002154C0030111E /* CustomTableViewCell.xib */; };
+		6BD6D69B20021B330030111E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD6D69920021B330030111E /* DetailViewController.m */; };
+		6BD6D69C20021B330030111E /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD6D69A20021B330030111E /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,15 +58,18 @@
 		6BCE24E41F8E38A400A1AA04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BCE24EB1F8E3BDF00A1AA04 /* MainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
 		6BCE24EC1F8E3BDF00A1AA04 /* MainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
-		6BCE24FE1F8EFE9200A1AA04 /* CustomTableViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewVC.h; sourceTree = "<group>"; };
-		6BCE24FF1F8EFE9200A1AA04 /* CustomTableViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewVC.m; sourceTree = "<group>"; };
-		6BCE25011F8F00EF00A1AA04 /* DetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailVC.h; sourceTree = "<group>"; };
-		6BCE25021F8F00EF00A1AA04 /* DetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailVC.m; sourceTree = "<group>"; };
-		6BCE25211F8F025B00A1AA04 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
-		6BCE25221F8F025B00A1AA04 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		6BD6D68820020A610030111E /* DefaultTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultTableView.h; sourceTree = "<group>"; };
 		6BD6D68920020A610030111E /* DefaultTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultTableView.m; sourceTree = "<group>"; };
 		6BD6D68A20020A610030111E /* DefaultTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultTableView.xib; sourceTree = "<group>"; };
+		6BD6D68E2002144F0030111E /* CustomTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTableView.h; sourceTree = "<group>"; };
+		6BD6D68F2002144F0030111E /* CustomTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTableView.m; sourceTree = "<group>"; };
+		6BD6D6902002144F0030111E /* CustomTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableView.xib; sourceTree = "<group>"; };
+		6BD6D6932002154C0030111E /* CustomTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		6BD6D6942002154C0030111E /* CustomTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		6BD6D6952002154C0030111E /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		6BD6D69820021B330030111E /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		6BD6D69920021B330030111E /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		6BD6D69A20021B330030111E /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,7 @@
 		6BCE24D21F8E38A400A1AA04 /* myPractice */ = {
 			isa = PBXGroup;
 			children = (
+				6BD6D68D200214390030111E /* CustomTableView */,
 				6BD6D68720020A4B0030111E /* DefaultTableView */,
 				6BCE24EB1F8E3BDF00A1AA04 /* MainVC.h */,
 				6BCE24EC1F8E3BDF00A1AA04 /* MainVC.m */,
@@ -157,7 +164,6 @@
 				6BCE24E11F8E38A400A1AA04 /* LaunchScreen.storyboard */,
 				6BCE24DF1F8E38A400A1AA04 /* Assets.xcassets */,
 				6BCE24E41F8E38A400A1AA04 /* Info.plist */,
-				6BCE24FD1F8EFE4E00A1AA04 /* customTableView */,
 				6B6BA7361F8F60EB002087D8 /* TabBar */,
 				6B98E4611F8F6CD400688168 /* ScrollView */,
 				6B47676A1F905D7A008B8944 /* XmlParsing */,
@@ -176,19 +182,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		6BCE24FD1F8EFE4E00A1AA04 /* customTableView */ = {
-			isa = PBXGroup;
-			children = (
-				6BCE24FE1F8EFE9200A1AA04 /* CustomTableViewVC.h */,
-				6BCE24FF1F8EFE9200A1AA04 /* CustomTableViewVC.m */,
-				6BCE25011F8F00EF00A1AA04 /* DetailVC.h */,
-				6BCE25021F8F00EF00A1AA04 /* DetailVC.m */,
-				6BCE25211F8F025B00A1AA04 /* CustomTableViewCell.h */,
-				6BCE25221F8F025B00A1AA04 /* CustomTableViewCell.m */,
-			);
-			name = customTableView;
-			sourceTree = "<group>";
-		};
 		6BD6D68720020A4B0030111E /* DefaultTableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +190,22 @@
 				6BD6D68A20020A610030111E /* DefaultTableView.xib */,
 			);
 			path = DefaultTableView;
+			sourceTree = "<group>";
+		};
+		6BD6D68D200214390030111E /* CustomTableView */ = {
+			isa = PBXGroup;
+			children = (
+				6BD6D68E2002144F0030111E /* CustomTableView.h */,
+				6BD6D68F2002144F0030111E /* CustomTableView.m */,
+				6BD6D6902002144F0030111E /* CustomTableView.xib */,
+				6BD6D6932002154C0030111E /* CustomTableViewCell.h */,
+				6BD6D6942002154C0030111E /* CustomTableViewCell.m */,
+				6BD6D6952002154C0030111E /* CustomTableViewCell.xib */,
+				6BD6D69820021B330030111E /* DetailViewController.h */,
+				6BD6D69920021B330030111E /* DetailViewController.m */,
+				6BD6D69A20021B330030111E /* DetailViewController.xib */,
+			);
+			path = CustomTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +268,10 @@
 			files = (
 				6BCE24E31F8E38A400A1AA04 /* LaunchScreen.storyboard in Resources */,
 				6BD6D68C20020A610030111E /* DefaultTableView.xib in Resources */,
+				6BD6D69C20021B330030111E /* DetailViewController.xib in Resources */,
+				6BD6D6972002154C0030111E /* CustomTableViewCell.xib in Resources */,
 				6BCE24E01F8E38A400A1AA04 /* Assets.xcassets in Resources */,
+				6BD6D6922002144F0030111E /* CustomTableView.xib in Resources */,
 				6BCE24DE1F8E38A400A1AA04 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,16 +283,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BD6D6962002154C0030111E /* CustomTableViewCell.m in Sources */,
 				6B4767771F9066B0008B8944 /* JsonParsingVC.m in Sources */,
 				6B47677D1F9082F0008B8944 /* JsonTableViewCell.m in Sources */,
-				6BCE25231F8F025B00A1AA04 /* CustomTableViewCell.m in Sources */,
 				6B6BA7351F8F60E6002087D8 /* TabBarVC.m in Sources */,
 				6B47676D1F905E5F008B8944 /* XmlParsingVC.m in Sources */,
 				6B4767841F90A1D0008B8944 /* CollectionViewCell.m in Sources */,
 				6BCE24ED1F8E3BDF00A1AA04 /* MainVC.m in Sources */,
 				6B98E4641F8F6D2F00688168 /* ScrollViewVC.m in Sources */,
-				6BCE25001F8EFE9200A1AA04 /* CustomTableViewVC.m in Sources */,
-				6BCE25031F8F00EF00A1AA04 /* DetailVC.m in Sources */,
+				6BD6D69B20021B330030111E /* DetailViewController.m in Sources */,
+				6BD6D6912002144F0030111E /* CustomTableView.m in Sources */,
 				6BD6D68B20020A610030111E /* DefaultTableView.m in Sources */,
 				6BCE24D81F8E38A400A1AA04 /* AppDelegate.m in Sources */,
 				6B4767811F90A04C008B8944 /* collectionViewVC.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "MainVC.h"
 #import "DefaultTableView.h"
+#import "CustomTableView.h"
 
 @interface MainVC ()
 
@@ -20,7 +21,7 @@
     
     //dataList = [[NSArray alloc] initWithObjects:@"tableView", @"cutomTableView", @"TabBar", @"ScrollView", @"XmlParsing", @"jsonParsing", @"collectionView", nil];
     NSDictionary *dic_1 = @{@"vc" : @"DefaultTableView", @"name": @"n1"};
-    NSDictionary *dic_2 = @{@"vc" : @"customTableView", @"name": @"n2"};
+    NSDictionary *dic_2 = @{@"vc" : @"CustomTableView", @"name": @"n2"};
     NSDictionary *dic_3 = @{@"vc" : @"TabBarVC", @"name": @"n3"};
     NSDictionary *dic_4 = @{@"vc" : @"ScrollViewVC", @"name": @"n4"};
     NSDictionary *dic_5 = @{@"vc" : @"XmlParsingVC", @"name": @"n5"};
@@ -51,7 +52,7 @@
     NSDictionary *dic = [dataList objectAtIndex:indexPath.row];
    
     if([[dic objectForKey:@"vc"]isEqualToString:@"DefaultTableView"]){
-        DefaultTableView *v = [[DefaultTableView alloc] initWithNibName:@"DefaultTableView" bundle:nil];
+        DefaultTableView *v = [[DefaultTableView alloc] initWithNibName:[dic objectForKey:@"vc"] bundle:nil];
     
         // 네비게이션 컨트롤러가 인스톨된 경우.
         if (self.navigationController) {
@@ -59,7 +60,17 @@
         } else {
             [self presentViewController:v animated:YES completion:nil];
         }
+    }else if([[dic objectForKey:@"vc"]isEqualToString:@"CustomTableView"]){
+        CustomTableView *v = [[CustomTableView alloc] initWithNibName:[dic objectForKey:@"vc"] bundle:nil];
+        
+        // 네비게이션 컨트롤러가 인스톨된 경우.
+        if (self.navigationController) {
+            [self.navigationController pushViewController:v animated:YES];
+        } else {
+            [self presentViewController:v animated:YES completion:nil];
+        }
     }
+
     
     
     

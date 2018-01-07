@@ -1,20 +1,22 @@
 //
-//  CustomTableViewVC.m
+//  CustomTableView.m
 //  myPractice
 //
-//  Created by 이재홍 on 2017. 10. 12..
-//  Copyright © 2017년 이재홍. All rights reserved.
+//  Created by 이재홍 on 2018. 1. 7..
+//  Copyright © 2018년 이재홍. All rights reserved.
 //
 
-#import "CustomTableViewVC.h"
-#import "DetailVC.h"
+#import "CustomTableView.h"
+#import "CustomTableViewCell.h"
+#import "DetailViewController.h"
 
-@interface CustomTableViewVC ()
+@interface CustomTableView ()
 
 @end
 
-@implementation CustomTableViewVC
-@synthesize tableView;
+@implementation CustomTableView{
+    NSArray *itemList;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,34 +36,29 @@
     NSDictionary *item13 = [[NSDictionary alloc]initWithObjectsAndKeys:@"멜론", @"named", @"watermelon.png", @"image", @"8", @"amount", @"9000원", @"value", nil];
     
     itemList = [[NSArray alloc]initWithObjects:item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, nil];
-    
-    /*
-        cell -> attribute inspector -> view -> background -> clear color로 변경해야 배경이 나온다.
-     */
-    UIImageView *backgroundImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background.jpg"]];
-    backgroundImageView.contentMode = UIViewContentModeScaleAspectFill;
-    backgroundImageView.frame = self.tableView.frame;
-    self.tableView.backgroundView = backgroundImageView;
-
 }
 
--(void)viewWillDisappear:(BOOL)animated{
-    
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - table view
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
+#pragma mark - tableView
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return itemList.count;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CustomTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    
+    static NSString *CellIdentifier = @"Cell";
+    
+    CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if(cell == nil){
+        [tableView registerNib:[UINib nibWithNibName:@"CustomTableViewCell" bundle:nil] forCellReuseIdentifier:CellIdentifier];
+        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    }
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     NSDictionary *dicTemp = [itemList objectAtIndex:indexPath.row];
     cell.idx = indexPath.row;
@@ -89,13 +86,19 @@
 {
     NSDictionary *dicTemp = [itemList objectAtIndex:indexPath.row];
     
-    DetailVC *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailVC"];
-    vc.name = [dicTemp objectForKey:@"named"];
-    vc.amount = [dicTemp objectForKey:@"amount"];
-    vc.value = [dicTemp objectForKey:@"value"];
-    vc.imageName = [dicTemp objectForKey:@"image"];
+    DetailViewController *v = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
     
-    [self.navigationController pushViewController:vc animated:true];
+    v.name = [dicTemp objectForKey:@"named"];
+    v.amount = [dicTemp objectForKey:@"amount"];
+    v.value = [dicTemp objectForKey:@"value"];
+    v.imageName = [dicTemp objectForKey:@"image"];
+    
+    // 네비게이션 컨트롤러가 인스톨된 경우.
+    if (self.navigationController) {
+        [self.navigationController pushViewController:v animated:YES];
+    } else {
+        [self presentViewController:v animated:YES completion:nil];
+    }
 }
 
 #pragma mark - a custom table view cell delegate
@@ -105,5 +108,6 @@
     NSLog(@"Delegate");
 }
 
-#pragma mark a custom table view cell delegate end
+
+
 @end
