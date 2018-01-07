@@ -1,22 +1,24 @@
 //
-//  TableViewVC.m
+//  DefaultTableView.m
 //  myPractice
 //
-//  Created by 이재홍 on 2017. 10. 11..
-//  Copyright © 2017년 이재홍. All rights reserved.
+//  Created by 이재홍 on 2018. 1. 7..
+//  Copyright © 2018년 이재홍. All rights reserved.
 //
 
-#import "TableViewVC.h"
+#import "DefaultTableView.h"
 
-@interface TableViewVC ()
+@interface DefaultTableView ()
 
 @end
 
-@implementation TableViewVC
+@implementation DefaultTableView{
+    NSArray *dataList;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+   
     NSDictionary *dict1 = [[NSDictionary alloc]initWithObjectsAndKeys:@"한국",@"지역",@"비",@"날씨", nil];
     NSDictionary *dict2 = [[NSDictionary alloc]initWithObjectsAndKeys:@"일본",@"지역",@"맑음",@"날씨", nil];
     NSDictionary *dict3 = [[NSDictionary alloc]initWithObjectsAndKeys:@"중국",@"지역",@"눈",@"날씨", nil];
@@ -40,13 +42,25 @@
     dataList = [[NSArray alloc]initWithObjects:dict1, dict2, dict3, dict4, dict5, dict6, dict7, dict8, dict9, dict10, dict11, dict12, dict13, dict14, dict15, dict16, dict17, dict18, dict19, nil];
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - tableView
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return dataList.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if(cell == nil){
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
+    
     NSDictionary *dicTemp = [dataList objectAtIndex:indexPath.row];
     
     cell.textLabel.text = [dicTemp objectForKey:@"지역"];
@@ -67,6 +81,7 @@
     
     return cell;
 }
+
 
 
 @end
